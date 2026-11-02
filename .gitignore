@@ -1,0 +1,10 @@
+# Alleen de app gaat in deze repo. PNG's, lettertypes en werkbestanden blijven lokaal.
+*
+!.gitignore
+!.nojekyll
+!README.md
+!index.html
+!sw.js
+!manifest.webmanifest
+!icons/
+!icons/*.png
