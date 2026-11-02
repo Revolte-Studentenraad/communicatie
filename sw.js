@@ -25,7 +25,8 @@ self.addEventListener('install', e => e.waitUntil((async () => {
 })()));
 
 self.addEventListener('activate', e => e.waitUntil((async () => {
-  for (const k of await caches.keys()) if (k !== CACHE) await caches.delete(k);
+  /* alleen de eigen oude versies: andere sites op github.io delen deze opslag */
+  for (const k of await caches.keys()) if (k !== CACHE && k.startsWith('postmaker-')) await caches.delete(k);
   await self.clients.claim();
 })()));
 
